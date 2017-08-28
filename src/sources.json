@@ -1,0 +1,150 @@
+{
+  "tasks": {
+    "listTasks": {
+      "path": "/sites/:site/tasks",
+      "method": "get"
+    },
+    "taskRecord": {
+      "path": "/sites/:site/tasks/:task",
+      "method": "get"
+    }
+  },
+  "servers": {
+    "listEnvironmentServers": {
+      "path": "/sites/:site/envs/:env/servers",
+      "method": "get"
+    },
+    "getServerRecord": {
+      "path": "/sites/:site/envs/:env/servers/:server",
+      "method": "get"
+    },
+    "getServerMaxPHPProcesses": {
+      "path": "/sites/:site/envs/:env/servers/:server/php-procs",
+      "method": "get"
+    }
+  },
+  "domains": {
+    "deleteDomain": {
+      "path": "/sites/:site/envs/:env/domains/:domain",
+      "method": "delete"
+    },
+    "purgeVarnishForDomain": {
+      "path": "/sites/:site/envs/:env/domains/:domain/cache",
+      "method": "delete"
+    },
+    "listEnvironmentServers": {
+      "path": "/sites/:site/envs/:env/domains",
+      "method": "get"
+    },
+    "getDomainRecord": {
+      "path": "/sites/:site/envs/:env/domains/:domain",
+      "method": "get"
+    },
+    "addDomain": {
+      "path": "/sites/:site/envs/:env/domains/:domain",
+      "method": "post"
+    }
+  },
+  "workflow": {
+    "deployCode": {
+      "path": "/sites/:site/code-deploy/:source/:target",
+      "method": "post"
+    },
+    "copyDatabase": {
+      "path": "/sites/:site/dbs/:db/db-copy/:source/:target",
+      "method": "post"
+    },
+    "moveDomains": {
+      "path": "/sites/:site/domain-move/:source/:target",
+      "method": "post"
+    },
+    "deployVCSBranch": {
+      "path": "/sites/:site/envs/:env/code-deploy",
+      "method": "post"
+    },
+    "copyFiles": {
+      "path": "/sites/:site/files-copy/:source/:target",
+      "method": "post"
+    }
+  },
+  "databse": {
+    "deleteDatabse": {
+      "path": "/sites/:site/dbs/:db",
+      "method": "delete"
+    },
+    "deleteDatabaseBackup": {
+      "path": "/sites/:site/envs/:env/dbs/:db/backups/:backup",
+      "method": "delete"
+    },
+    "listDatabases": {
+      "path": "/sites/:site/dbs",
+      "method": "get"
+    },
+    "getDatabaseRecord": {
+      "path": "sites/:site/dbs/:db",
+      "method": "get"
+    },
+    "listEnvironmentDatabaseInstances": {
+      "path": "/sites/:site/envs/:env/dbs",
+      "method": "get"
+    },
+    "getDatabaseInstance": {
+      "path": "/sites/:site/envs/:env/dbs/:db",
+      "method": "get"
+    },
+    "getDatabaseInstanceBackups": {
+      "path": "/sites/:site/envs/:env/dbs/:db/backups",
+      "method": "get"
+    },
+    "getDatabaseInstanceBackupDetails": {
+      "path": "/sites/:site/envs/:env/dbs/:db/backups/:backup",
+      "method": "get"
+    },
+    "downloadDatabaseInstanceBackup": {
+      "path": "/sites/:site/envs/:env/dbs/:db/backups/:backup/download",
+      "method": "get"
+    },
+    "addDatabase": {
+      "path": "/sites/:site/dbs",
+      "method": "post"
+    },
+    "createDatabaseInstanceBackup": {
+      "path": "/sites/:site/envs/:env/dbs/:db/backups",
+      "method": "delete"
+    },
+    "restoreEnvironmentDatabaseBackup": {
+      "path": "/sites/:site/envs/:env/dbs/:db/backups/:backup/restore",
+      "method": "post"
+    }
+  },
+  "sites": {
+    "getSites": {
+      "path": "/sites",
+      "method": "get"
+    },
+    "getSiteRecord": {
+      "path": "/sites/:site",
+      "method": "get"
+    },
+    "listSiteEnvironments": {
+      "path": "/sites/:site/envs",
+      "method": "get"
+    },
+    "getEnvironmentRecord": {
+      "path": "/sites/:site/envs/:env",
+      "method": "get"
+    },
+    "getLogStreamCommand": {
+      "path": "/sites/:site/envs/:env/logstream",
+      "method": "get"
+    },
+    "installDrupal": {
+      "path": "/sites/:site/envs/:env/install/:type",
+      "method": "post"
+    },
+    "configureLiveDevelopment": {
+      "path": "/sites/:site/envs/:env/livedev/:action",
+      "method": "post"
+    }
+  }
+}
