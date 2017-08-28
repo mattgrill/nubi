@@ -1,6 +1,6 @@
 {
   "name": "nubi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "author": "Matthew Grill <matt.grill@acquia.com>",
   "license": "MIT",
@@ -9,6 +9,7 @@
     "url": "https://github.com/mattgrill/nubi.git"
   },
   "scripts": {
+    "prepublishOnly": "yarn run build",
     "build": "./node_modules/.bin/rollup --config rollup.config.js"
   },
   "devDependencies": {
