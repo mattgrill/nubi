@@ -1,6 +1,6 @@
 {
   "name": "nubi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "author": "Matthew Grill <matt.grill@acquia.com>",
   "license": "MIT",

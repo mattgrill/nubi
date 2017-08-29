@@ -2,10 +2,7 @@
 
 ```javascript
 const Nubi = require('nubi');
-const nubi = new Nubi(
-  '{USERNAME}', // YOUR USERNAME
-  '{PASSWORD}', // YOUR PASSWORD
-);
+const nubi = new Nubi();
 
 nubi.api.tasks.listTasks({ site: '{MYSITE}' })
   .then(console.log)
@@ -13,6 +10,8 @@ nubi.api.tasks.listTasks({ site: '{MYSITE}' })
 ```
 
 ## Documentation
+
+**Authentication** - You can either pass `NUBI_USERNAME` & `NUBI_PASSWORD` containing your basic authentication credentials with each request, or specify them in your environment and they will be automatically used with each request. The credentials-as-arguments take precedence over environment variables if both are present.
 
 All methods accept a single object as an argument with the `parameters` as `keys`. These are used for replacements in template strings.
 
